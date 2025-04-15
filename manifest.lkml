@@ -1,4 +1,4 @@
-project_name: "app-lookml-diagram"
+project_name: "iprado_lookml_diagram"
 
 application: lookml-diagram {
   label: "LookML Diagram"

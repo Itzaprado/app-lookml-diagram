@@ -4,6 +4,14 @@ view: orders {
   dimension: id {}
 }
 
+view: orders2 {
+  dimension: id {}
+}
+
+view: orders3 {
+  dimension: id {}
+}
+
 explore: orders_test {
   view_name: orders
   join: orders2 {
@@ -19,4 +27,12 @@ explore: orders_test {
     relationship: one_to_one
     type: left_outer
   }
+}
+
+explore: orders2 {
+  view_name: orders2
+}
+
+explore: orders3 {
+  view_name: orders3
 }

@@ -1,7 +1,7 @@
 project_name: "iprado_lookml_diagram"
 
 application: lookml-diagram {
-  label: "LookML Diagram"
+  label: "LookML Diagram Test"
   file: "dist/bundle.js"
   entitlements: {
     new_window_external_urls: ["https://docs.looker.com/data-modeling/extension-framework/lookml-diagram"]

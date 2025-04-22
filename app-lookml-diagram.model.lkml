@@ -1,28 +1,44 @@
 connection: "thelook"
 
-view: orders {
-  dimension: id {}
+view: orders_test {
+  dimension: id {
+    type: string
+    sql: ${TABLE}.customer_id ;;
+  }
+  dimension: order_id {
+    type: number
+    sql: ${TABLE}.order_id ;;
+  }
+  dimension: order_price {
+    type: number
+    sql: ${TABLE}.order_price ;;
+  }
+  measure: count {
+    type: count
+  }
 }
 
 view: orders2 {
-  dimension: id {}
+  dimension: id {
+    type: string
+  }
 }
 
 view: orders3 {
-  dimension: id {}
+  dimension: id {
+    type: string
+  }
 }
 
 explore: orders_test {
-  view_name: orders
   join: orders2 {
-    from: orders
-    sql_on: ${orders2.id} = ${orders.id} ;;
+    from: orders_test
+    sql_on: ${orders2.id} = ${orders_test.id} ;;
     relationship: one_to_one
     type: left_outer
   }
   join: orders3 {
-    from: orders
-    fields: [orders3.id]
+    from: orders_test
     sql_on: LEFT JOIN UNNEST(${orders3.id}) ;;
     relationship: one_to_one
     type: left_outer

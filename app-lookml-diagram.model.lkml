@@ -23,7 +23,7 @@ explore: orders_test {
   join: orders3 {
     from: orders
     fields: []
-    sql_on: LEFT JOIN UNNEST(${orders.id}) ;;
+    sql_on: LEFT JOIN UNNEST(${orders3.id}) ;;
     relationship: one_to_one
     type: left_outer
   }

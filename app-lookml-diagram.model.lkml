@@ -4,15 +4,6 @@ view: orders_test {
   dimension: id {
     type: string
   }
-  dimension: order_id {
-    type: number
-  }
-  dimension: order_price {
-    type: number
-  }
-  measure: count {
-    type: count
-  }
 }
 
 view: orders2 {

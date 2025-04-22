@@ -19,6 +19,7 @@ view: orders3 {
 }
 
 explore: orders_test {
+  view_name: orders_test
   join: orders2 {
     from: orders_test
     sql_on: ${orders2.id} = ${orders_test.id} ;;

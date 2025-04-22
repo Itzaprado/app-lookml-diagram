@@ -39,7 +39,7 @@ explore: orders_test {
   }
   join: orders3 {
     from: orders_test
-    sql_on: LEFT JOIN UNNEST(${orders3.id}) ;;
+    sql_on: LEFT JOIN UNNEST(${orders_test.id}) ;;
     relationship: one_to_one
     type: left_outer
   }

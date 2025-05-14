@@ -1,21 +1,7 @@
 connection: "thelook"
 
 view: orders_test {
-  dimension: id {
-    type: string
-  }
-}
-
-view: orders2 {
-  dimension: id {
-    type: string
-  }
-}
-
-view: orders3 {
-  dimension: id {
-    type: string
-  }
+  dimension: id {}
 }
 
 explore: orders_test {
@@ -28,16 +14,9 @@ explore: orders_test {
   }
   join: orders3 {
     from: orders_test
+    fields: []
     sql: LEFT JOIN UNNEST(${orders_test.id}) ;;
     relationship: one_to_one
     type: left_outer
   }
-}
-
-explore: orders2 {
-  view_name: orders2
-}
-
-explore: orders3 {
-  view_name: orders3
 }

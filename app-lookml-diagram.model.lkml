@@ -25,7 +25,7 @@ explore: order_items {
   view_name: orders
   join: orders2 {
     from: orders
-    sql_on: ${orders2.id} = ${orders.id} ;;
+    sql_on: LEFT JOIN UNNEST(${orders2.id}) ;;
     relationship: one_to_one
     type: left_outer
   }

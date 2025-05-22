@@ -4,6 +4,8 @@ view: orders {
   dimension: id {}
 }
 
+view: orders_test {}
+
 explore: orders_test {
   view_name: orders
   join: orders2 {

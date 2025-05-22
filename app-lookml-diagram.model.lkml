@@ -22,3 +22,7 @@ explore: orders_test {
     type: left_outer
   }
 }
+
+explore: orders {
+  view_name: orders
+}

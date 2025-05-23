@@ -16,7 +16,6 @@ explore: orders_test {
   }
   join: orders3 {
     from: orders
-    fields: []
     sql: LEFT JOIN UNNEST(${orders.id}) ;;
     relationship: one_to_one
     type: left_outer
